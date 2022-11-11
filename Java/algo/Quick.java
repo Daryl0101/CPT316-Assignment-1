@@ -15,7 +15,6 @@ public class Quick {
 
     // Partition Algorithm
     private static int Partition(String[] word, int left, int right){
-        // RandomPivot(word,left,right);
         String pivot_word = word[right];
         int i = left-1;
 
