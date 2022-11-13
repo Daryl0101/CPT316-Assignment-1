@@ -28,7 +28,7 @@ public class utility {
                 }
             long end = System.nanoTime();
             long executionTime =  (end - start)/1000000;
-            System.out.println("Time executed: " + executionTime + " ms");
+            System.out.println("Time elapsed: " + executionTime + " ms");
         }  catch(Exception e){
             e.printStackTrace();
         }
