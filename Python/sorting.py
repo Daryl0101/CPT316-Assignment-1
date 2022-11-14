@@ -2,7 +2,7 @@ import time
 from Quick import QuickSort
 
 def main():
-    file = open("C:/Users/admin/Desktop/USM/CPT316-Assignment-1-master/sgb-words.txt")
+    file = open("sgb-words.txt")
     data = file.read().split("\n")
     file.close()
 
