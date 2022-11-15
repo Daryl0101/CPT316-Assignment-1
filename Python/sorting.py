@@ -2,23 +2,28 @@ import time
 from Quick import QuickSort
 
 def main():
-    file = open("C:/Users/admin/Desktop/USM/CPT316-Assignment-1-master/sgb-words.txt")
+    # Import list of text to sort
+    file = open("sgb-words.txt")
     data = file.read().split("\n")
     file.close()
 
-    size = len(data)
+    # Timestamp when sorting starts
     start = time.time()
-    print('Sorted Array in Ascending Order:')
-    QuickSort(data, 0, size - 1)
+
+    # Quick Sort
+    QuickSort(data, 0, len(data)-1)
+    
+    # Timestamp when sorting ends
     end = time.time()
-    for i in data:
-            print (i)
+
+    # Output execution time
     print ("Time elapsed: " , int((end-start)*1000), "ms")
     
+    # Record sorting result in text file called "sgb-words-sorted-py.txt"
     file = open("Python/sgb-words-sorted-py.txt", "w")
     for i in data:
         file.write(i)
-        if i==data[size-1]:
+        if i==data[len(data)-1]:
             break
         file.write("\n")
     file.close()

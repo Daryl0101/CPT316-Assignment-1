@@ -19,21 +19,6 @@ public class utility {
         return data;
     }
 
-    // Utility function for displaying output and execution time
-    public static void Display(String[] data){
-        try {
-            long start = System.nanoTime();
-                for(int i=0; i<data.length; i++){
-                System.out.println(data[i]);
-                }
-            long end = System.nanoTime();
-            long executionTime =  (end - start)/1000000;
-            System.out.println("Time executed: " + executionTime + " ms");
-        }  catch(Exception e){
-            e.printStackTrace();
-        }
-    }
-
     // Utility function for exporting array into file
     public static void ExportFile(String path, String[] data){
         try {
