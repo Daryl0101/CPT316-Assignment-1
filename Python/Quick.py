@@ -10,7 +10,7 @@ def Partition(word, left, right):
 	# Place the word to position i if it is smaller than the pivot word
 	# Thus all words smaller than the pivot word is placed on the left of pivot word
 	for j in range(left,right):
-		if word[j]<=pivot_word:
+		if word[j]<pivot_word:
 			i = i+1
 			(word[i],word[j]) = (word[j],word[i])
 
